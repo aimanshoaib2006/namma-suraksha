@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Namma Suraksha</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Namma Suraksha</h1>
+<p>AI Powered Civic Safety Platform</p>
+
+</header>
+
+<div class="menu">
+
+<button onclick="show('report')">Report</button>
+<button onclick="show('map')">City Map</button>
+<button onclick="show('sos')">SOS</button>
+<button onclick="show('dashboard')">Dashboard</button>
+
+</div>
+
+
+<section id="report">
+
+<h2>Report Violation</h2>
+
+<input id="vehicle" placeholder="Vehicle Number">
+
+<select id="type">
+
+<option>No Helmet</option>
+<option>Signal Jump</option>
+<option>Wrong Side</option>
+<option>Road Rage</option>
+
+</select>
+
+<button onclick="submitReport()">Submit</button>
+
+<p id="location"></p>
+
+</section>
+
+
+<section id="map" class="hidden">
+
+<h2>City Safety Map</h2>
+
+<div id="mapid"></div>
+
+</section>
+
+
+<section id="sos" class="hidden">
+
+<h2>Emergency SOS</h2>
+
+<button class="sos" onclick="sendSOS()">
+
+SEND SOS
+
+</button>
+
+<p id="sosloc"></p>
+
+</section>
+
+
+<section id="dashboard" class="hidden">
+
+<h2>City Dashboard</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3 id="rCount">0</h3>
+<p>Reports</p>
+</div>
+
+<div class="card">
+<h3 id="sCount">0</h3>
+<p>SOS Alerts</p>
+</div>
+
+</div>
+
+</section>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
